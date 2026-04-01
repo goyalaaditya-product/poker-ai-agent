@@ -29,11 +29,7 @@
     header span { font-size: 13px; color: #7c8494; }
     .suit { font-size: 22px; }
 
-    .tabs {
-      display: flex;
-      gap: 4px;
-      margin-left: auto;
-    }
+    .tabs { display: flex; gap: 4px; margin-left: auto; }
 
     .tab {
       padding: 7px 16px;
@@ -164,10 +160,7 @@
     .suggestion:hover { border-color: #2d5a3d; color: #e8e8e8; }
 
     /* ── Hand Analyzer ── */
-    #analyzer-panel {
-      overflow-y: auto;
-      padding: 32px 24px;
-    }
+    #analyzer-panel { overflow-y: auto; padding: 32px 24px; }
 
     .analyzer-form {
       max-width: 520px;
@@ -177,25 +170,11 @@
       gap: 16px;
     }
 
-    .analyzer-form h2 {
-      font-size: 16px;
-      font-weight: 500;
-      color: #7c8494;
-      margin-bottom: 4px;
-    }
+    .analyzer-form h2 { font-size: 16px; font-weight: 500; color: #7c8494; margin-bottom: 4px; }
 
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
     .form-group.full { grid-column: 1 / -1; }
 
     .form-group label {
@@ -223,7 +202,6 @@
     .form-group input:focus,
     .form-group select:focus,
     .form-group textarea:focus { border-color: #2d5a3d; }
-
     .form-group select option { background: #1e2130; }
     .form-group textarea { resize: vertical; min-height: 80px; }
 
@@ -263,6 +241,189 @@
       color: #2d5a3d;
       margin-bottom: 10px;
     }
+
+    /* ── Quiz ── */
+    #quiz-panel { overflow-y: auto; padding: 32px 24px; }
+
+    .quiz-container {
+      max-width: 580px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .quiz-top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .score-bar {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #1e2130;
+      border: 1px solid #2a2d3a;
+      border-radius: 10px;
+      padding: 12px 16px;
+    }
+
+    .score-bar .score-label { font-size: 13px; color: #7c8494; }
+    .score-bar .score-value { font-size: 20px; font-weight: 600; color: #fff; }
+    .score-bar .streak { font-size: 13px; color: #c9a84c; }
+
+    .difficulty-select {
+      background: #1e2130;
+      border: 1px solid #2a2d3a;
+      border-radius: 10px;
+      padding: 10px 14px;
+      color: #e8e8e8;
+      font-size: 13px;
+      font-weight: 500;
+      outline: none;
+      cursor: pointer;
+      font-family: inherit;
+      height: 44px;
+    }
+
+    .difficulty-select:focus { border-color: #2d5a3d; }
+    .difficulty-select option { background: #1e2130; }
+
+    .quiz-card {
+      background: #1e2130;
+      border: 1px solid #2a2d3a;
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .quiz-meta { display: flex; gap: 8px; align-items: center; }
+
+    .badge {
+      font-size: 11px;
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+
+    .badge.beginner { background: #1a3a2a; color: #4caf7d; }
+    .badge.intermediate { background: #2a2a1a; color: #c9a84c; }
+    .badge.advanced { background: #2a1a1a; color: #e05555; }
+    .badge.preflop { background: #1a2a3a; color: #5b9bd5; }
+    .badge.postflop { background: #2a1a3a; color: #a57dd5; }
+
+    .quiz-scenario {
+      font-size: 15px;
+      font-weight: 500;
+      color: #fff;
+      line-height: 1.5;
+    }
+
+    .quiz-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .detail-item {
+      background: #0f1117;
+      border-radius: 8px;
+      padding: 10px 12px;
+    }
+
+    .detail-item .d-label {
+      font-size: 11px;
+      color: #4a4f5e;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+
+    .detail-item .d-value { font-size: 14px; color: #e8e8e8; font-weight: 500; }
+
+    .options-grid { display: flex; flex-direction: column; gap: 8px; }
+
+    .option-btn {
+      width: 100%;
+      padding: 14px 18px;
+      background: #0f1117;
+      border: 1px solid #2a2d3a;
+      border-radius: 10px;
+      color: #e8e8e8;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .option-btn:hover:not(:disabled) { border-color: #2d5a3d; color: #fff; }
+    .option-btn.correct { border-color: #2d5a3d; background: #1a3a2a; color: #4caf7d; }
+    .option-btn.wrong { border-color: #5a2d2d; background: #2a1a1a; color: #e05555; }
+    .option-btn:disabled { cursor: not-allowed; }
+
+    .explanation {
+      background: #0f1117;
+      border-left: 3px solid #2d5a3d;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 16px;
+      font-size: 13px;
+      line-height: 1.7;
+      color: #a0a8b8;
+      display: none;
+    }
+
+    .explanation.show { display: block; }
+    .explanation .ex-title {
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #2d5a3d;
+      margin-bottom: 6px;
+      letter-spacing: 0.05em;
+    }
+
+    .next-btn {
+      width: 100%;
+      padding: 13px;
+      background: #2d5a3d;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      display: none;
+    }
+
+    .next-btn:hover { background: #3a7050; }
+    .next-btn.show { display: block; }
+
+    .start-btn {
+      width: 100%;
+      padding: 14px;
+      background: #2d5a3d;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .start-btn:hover { background: #3a7050; }
+
+    .loading-text {
+      text-align: center;
+      color: #4a4f5e;
+      font-size: 14px;
+      font-style: italic;
+      padding: 20px;
+    }
   </style>
 </head>
 <body>
@@ -274,6 +435,7 @@
     <div class="tabs">
       <div class="tab active" onclick="switchTab('chat')">Chat</div>
       <div class="tab" onclick="switchTab('analyzer')">Hand Analyzer</div>
+      <div class="tab" onclick="switchTab('quiz')">Quiz</div>
     </div>
   </header>
 
@@ -303,7 +465,6 @@
   <div class="panel" id="analyzer-panel">
     <div class="analyzer-form">
       <h2>Enter your hand details</h2>
-
       <div class="form-row">
         <div class="form-group">
           <label>Your cards</label>
@@ -312,67 +473,50 @@
         <div class="form-group">
           <label>Your position</label>
           <select id="hero-position">
-            <option value="">Select</option>
-            <option>UTG</option>
-            <option>UTG+1</option>
-            <option>HJ</option>
-            <option>CO</option>
-            <option>BTN</option>
-            <option>SB</option>
-            <option>BB</option>
+            <option value="">Select position</option>
+            <option value="UTG">Under the Gun (UTG)</option>
+            <option value="UTG+1">Under the Gun +1 (UTG+1)</option>
+            <option value="HJ">Hijack (HJ)</option>
+            <option value="CO">Cutoff (CO)</option>
+            <option value="BTN">Button (BTN)</option>
+            <option value="SB">Small Blind (SB)</option>
+            <option value="BB">Big Blind (BB)</option>
           </select>
         </div>
       </div>
-
       <div class="form-row">
         <div class="form-group">
           <label>Villain position</label>
           <select id="villain-position">
-            <option value="">Select</option>
-            <option>UTG</option>
-            <option>UTG+1</option>
-            <option>HJ</option>
-            <option>CO</option>
-            <option>BTN</option>
-            <option>SB</option>
-            <option>BB</option>
+            <option value="">Select position</option>
+            <option value="UTG">Under the Gun (UTG)</option>
+            <option value="UTG+1">Under the Gun +1 (UTG+1)</option>
+            <option value="HJ">Hijack (HJ)</option>
+            <option value="CO">Cutoff (CO)</option>
+            <option value="BTN">Button (BTN)</option>
+            <option value="SB">Small Blind (SB)</option>
+            <option value="BB">Big Blind (BB)</option>
           </select>
         </div>
         <div class="form-group">
-          <label>Villain type</label>
-          <select id="villain-type">
-            <option value="">Unknown</option>
-            <option>Nit (very tight)</option>
-            <option>TAG (tight aggressive)</option>
-            <option>LAG (loose aggressive)</option>
-            <option>Calling station</option>
-            <option>Maniac</option>
+          <label>Street</label>
+          <select id="street">
+            <option>Preflop</option>
+            <option>Flop</option>
+            <option>Turn</option>
+            <option>River</option>
           </select>
         </div>
       </div>
-
       <div class="form-group">
         <label>Action so far</label>
         <input type="text" id="action" placeholder="e.g. Villain opens 3BB">
       </div>
-
-      <div class="form-group">
-        <label>Street</label>
-        <select id="street">
-          <option>Preflop</option>
-          <option>Flop</option>
-          <option>Turn</option>
-          <option>River</option>
-        </select>
-      </div>
-
       <div class="form-group">
         <label>Your question</label>
         <textarea id="question" placeholder="e.g. Should I 3-bet or call?"></textarea>
       </div>
-
       <button class="analyze-btn" onclick="analyzeHand()">Analyze this hand</button>
-
       <div id="analysis-result">
         <div class="result-label">Coach analysis</div>
         <div id="analysis-text"></div>
@@ -380,8 +524,87 @@
     </div>
   </div>
 
+  <!-- Quiz Panel -->
+  <div class="panel" id="quiz-panel">
+    <div class="quiz-container">
+
+      <div class="quiz-top-bar">
+        <div class="score-bar">
+          <div>
+            <div class="score-label">Score</div>
+            <div class="score-value"><span id="correct">0</span> / <span id="total">0</span></div>
+          </div>
+          <div class="streak" id="streak-display"></div>
+          <div>
+            <div class="score-label">Accuracy</div>
+            <div class="score-value" id="accuracy">—</div>
+          </div>
+        </div>
+        <select class="difficulty-select" id="difficulty-filter">
+          <option value="Any">Any level</option>
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Advanced">Advanced</option>
+        </select>
+      </div>
+
+      <div id="quiz-start">
+        <div class="quiz-card" style="text-align:center; gap:12px;">
+          <div style="font-size:32px;">🂡</div>
+          <div style="font-size:18px; font-weight:500; color:#fff;">Poker Quiz</div>
+          <div style="font-size:14px; color:#7c8494; line-height:1.6;">Test your poker knowledge with AI-generated scenarios. Each question is unique — preflop and postflop spots across all skill levels. Use the difficulty filter to focus on your level.</div>
+          <button class="start-btn" onclick="loadQuestion()">Start Quiz</button>
+        </div>
+      </div>
+
+      <div id="quiz-content" style="display:none; flex-direction:column; gap:16px;">
+        <div class="quiz-card">
+          <div class="quiz-meta">
+            <span class="badge beginner" id="difficulty-badge">Beginner</span>
+            <span class="badge preflop" id="street-badge">Preflop</span>
+          </div>
+          <div class="quiz-scenario" id="quiz-scenario">Loading...</div>
+          <div class="quiz-details">
+            <div class="detail-item">
+              <div class="d-label">Your hand</div>
+              <div class="d-value" id="quiz-cards">—</div>
+            </div>
+            <div class="detail-item">
+              <div class="d-label">Position</div>
+              <div class="d-value" id="quiz-position">—</div>
+            </div>
+           <div class="detail-item" id="villain-detail" style="display:none;">
+  <div class="d-label">Opponent</div>
+  <div class="d-value" id="quiz-villain">—</div>
+</div>
+            <div class="detail-item">
+              <div class="d-label">Pot / Board</div>
+              <div class="d-value" id="quiz-board">—</div>
+            </div>
+          </div>
+          <div style="font-size:13px; color:#7c8494;">
+            <span id="quiz-action"></span>
+          </div>
+          <div class="options-grid" id="options-grid"></div>
+          <div class="explanation" id="explanation">
+            <div class="ex-title">Coach explains</div>
+            <div id="explanation-text"></div>
+          </div>
+        </div>
+        <button class="next-btn" id="next-btn" onclick="loadQuestion()">Next question →</button>
+      </div>
+
+      <div class="loading-text" id="quiz-loading" style="display:none;">
+        Generating question...
+      </div>
+
+    </div>
+  </div>
+
   <script>
     const conversationHistory = [];
+    let score = { correct: 0, total: 0, streak: 0 };
+    let currentQuestion = null;
 
     function switchTab(tab) {
       document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
@@ -420,28 +643,21 @@
       const text = userInput.value.trim();
       if (!text) return;
       userInput.value = '';
-
       const sendBtn = document.querySelector('#chat-panel .send-btn');
       sendBtn.disabled = true;
-
       addMessage('user', text);
       conversationHistory.push({ role: 'user', content: text });
-
       const typingDiv = addMessage('typing', 'Coach is thinking...');
-
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ messages: conversationHistory })
       });
-
       const data = await response.json();
       const reply = data.content[0].text;
-
       typingDiv.remove();
       addMessage('assistant', reply);
       conversationHistory.push({ role: 'assistant', content: reply });
-
       sendBtn.disabled = false;
       userInput.focus();
     }
@@ -450,7 +666,6 @@
       const heroCards    = document.getElementById('hero-cards').value.trim();
       const heroPosition = document.getElementById('hero-position').value;
       const villainPos   = document.getElementById('villain-position').value;
-      const villainType  = document.getElementById('villain-type').value;
       const action       = document.getElementById('action').value.trim();
       const street       = document.getElementById('street').value;
       const question     = document.getElementById('question').value.trim();
@@ -461,36 +676,134 @@
       }
 
       const prompt = `Please analyze this poker hand:
-
 HERO: ${heroCards} in ${heroPosition}
-VILLAIN: ${villainPos || 'unknown position'} — ${villainType || 'unknown type'}
+VILLAIN: ${villainPos || 'unknown position'}
 Action: ${action || 'none specified'}
 Street: ${street}
-
 Question: ${question}`;
 
       const analyzeBtn = document.querySelector('.analyze-btn');
       analyzeBtn.disabled = true;
       analyzeBtn.textContent = 'Analyzing...';
-
       document.getElementById('analysis-result').style.display = 'none';
 
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          messages: [{ role: 'user', content: prompt }]
-        })
+        body: JSON.stringify({ messages: [{ role: 'user', content: prompt }] })
       });
 
       const data = await response.json();
-      const reply = data.content[0].text;
-
-      document.getElementById('analysis-text').textContent = reply;
+      document.getElementById('analysis-text').textContent = data.content[0].text;
       document.getElementById('analysis-result').style.display = 'block';
-
       analyzeBtn.disabled = false;
       analyzeBtn.textContent = 'Analyze this hand';
+    }
+
+    async function loadQuestion() {
+      const difficulty = document.getElementById('difficulty-filter').value;
+
+      document.getElementById('quiz-start').style.display = 'none';
+      document.getElementById('quiz-content').style.display = 'none';
+      document.getElementById('quiz-loading').style.display = 'block';
+      document.getElementById('next-btn').classList.remove('show');
+      document.getElementById('explanation').classList.remove('show');
+
+      const response = await fetch('/api/quiz', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ difficulty })
+      });
+
+      const data = await response.json();
+
+      if (!data.success) {
+        document.getElementById('quiz-loading').style.display = 'none';
+        document.getElementById('quiz-start').style.display = 'block';
+        alert('Failed to load question. Try again.');
+        return;
+      }
+
+      currentQuestion = data.question;
+      renderQuestion(currentQuestion);
+    }
+
+    function renderQuestion(q) {
+      document.getElementById('quiz-loading').style.display = 'none';
+
+      const diffBadge = document.getElementById('difficulty-badge');
+      diffBadge.textContent = q.difficulty || 'Intermediate';
+      diffBadge.className = 'badge ' + (q.difficulty || 'intermediate').toLowerCase();
+
+      const isPostflop = q.board && q.board.trim() !== '' &&
+        q.board.toLowerCase() !== 'blank' &&
+        q.board.toLowerCase() !== 'preflop' &&
+        q.board.toLowerCase() !== 'n/a';
+
+      const streetBadge = document.getElementById('street-badge');
+      streetBadge.textContent = isPostflop ? 'Postflop' : 'Preflop';
+      streetBadge.className = 'badge ' + (isPostflop ? 'postflop' : 'preflop');
+
+      document.getElementById('quiz-scenario').textContent = q.scenario;
+      document.getElementById('quiz-cards').textContent = q.hero_cards || '—';
+      document.getElementById('quiz-position').textContent = q.position || '—';
+      const isAdvanced = (q.difficulty || '').toLowerCase() === 'advanced';
+const villainDetail = document.getElementById('villain-detail');
+villainDetail.style.display = isAdvanced ? 'block' : 'none';
+if (isAdvanced && q.villain_info) {
+  document.getElementById('quiz-villain').textContent = q.villain_info;
+}
+      document.getElementById('quiz-board').textContent = isPostflop ? q.board : (q.pot || '—');
+      document.getElementById('quiz-action').textContent = q.action || '';
+
+      const grid = document.getElementById('options-grid');
+      grid.innerHTML = '';
+      (q.options || ['Fold', 'Call', 'Raise']).forEach(opt => {
+        const btn = document.createElement('button');
+        btn.className = 'option-btn';
+        btn.textContent = opt;
+        btn.onclick = () => answerQuestion(opt, btn);
+        grid.appendChild(btn);
+      });
+
+      document.getElementById('quiz-content').style.display = 'flex';
+    }
+
+    function answerQuestion(chosen, btn) {
+      const correct = currentQuestion.correct;
+      const isCorrect = chosen.toLowerCase().includes(correct.toLowerCase()) ||
+                        correct.toLowerCase().includes(chosen.toLowerCase());
+
+      document.querySelectorAll('.option-btn').forEach(b => {
+        b.disabled = true;
+        if (b.textContent.toLowerCase().includes(correct.toLowerCase())) {
+          b.classList.add('correct');
+        }
+      });
+
+      if (!isCorrect) {
+        btn.classList.add('wrong');
+        score.streak = 0;
+      } else {
+        score.correct++;
+        score.streak++;
+      }
+
+      score.total++;
+      updateScore();
+
+      document.getElementById('explanation-text').textContent = currentQuestion.explanation;
+      document.getElementById('explanation').classList.add('show');
+      document.getElementById('next-btn').classList.add('show');
+    }
+
+    function updateScore() {
+      document.getElementById('correct').textContent = score.correct;
+      document.getElementById('total').textContent = score.total;
+      const pct = score.total > 0 ? Math.round((score.correct / score.total) * 100) : 0;
+      document.getElementById('accuracy').textContent = score.total > 0 ? pct + '%' : '—';
+      const streakEl = document.getElementById('streak-display');
+      streakEl.textContent = score.streak >= 2 ? `🔥 ${score.streak} streak` : '';
     }
   </script>
 
